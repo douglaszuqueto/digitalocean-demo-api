@@ -8,9 +8,7 @@ import (
 )
 
 func main() {
-	app := fiber.New(fiber.Config{
-		Prefork: true,
-	})
+	app := fiber.New(fiber.Config{})
 
 	app.Use(logger.New())
 

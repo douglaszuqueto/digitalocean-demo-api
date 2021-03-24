@@ -19,7 +19,7 @@ RUN upx /app/mutuca-lambda
 
 # FINAL
 FROM douglaszuqueto/alpine-go
-COPY certs /app/certs
 WORKDIR /app
 COPY --from=upx /app/mutuca-lambda /app
-CMD ["./mutuca-lambda"]
+CMD ["/app/mutuca-lambda"]
+EXPOSE 4000
